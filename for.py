@@ -16,8 +16,8 @@ for i in range(5):
     print(f"giro numero {i}")
 
 film = ["Matrix", "Inception", "Interstellar"]
-print("voglio giurdare questi film:")
+print("voglio guardare questi film:")
 
-for uscita in film:
-    print(f"- {uscita}")
-    
+for titolo in film:
+    print(f"- {titolo}")
+
