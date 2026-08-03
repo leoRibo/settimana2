@@ -10,16 +10,18 @@ def mostra_contatti(lista):
 mostra_contatti(rubbrica)
 
 def aggiungi_contatto(lista):
-    nuovo_nome = input("aggiugi nome").title()
-    nuovo_numero = input("aggiugi il numero di telefono").title()
+    nuovo_nome = input("aggiugi nome: ").title()
+    nuovo_numero = input("aggiugi il numero di telefono: ")
     lista.append({"nome": nuovo_nome, "numero_cell": nuovo_numero})
 
 aggiungi_contatto(rubbrica)
 mostra_contatti(rubbrica)
 
-
-
-
-
-
+def cerca_contatto( lista, nome_cercato):
+    for contatto in lista:
+        if contatto['nome'] == nome_cercato:
+            print(f"Trovato! {contatto['nome']}: {contatto['numero_cell']}")
         
+
+chi_cerco = input("CHi vuoi cercare? ").title()
+cerca_contatto(rubbrica, chi_cerco)    
