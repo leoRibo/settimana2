@@ -18,10 +18,19 @@ aggiungi_contatto(rubbrica)
 mostra_contatti(rubbrica)
 
 def cerca_contatto( lista, nome_cercato):
+    trovato = False
     for contatto in lista:
         if contatto['nome'] == nome_cercato:
             print(f"Trovato! {contatto['nome']}: {contatto['numero_cell']}")
-        
+            trovato = True
+    if trovato == False:
+        print(f" {nome_cercato} non è in rubbrica")
+        domanda = input("vuoi aggiungerlo?")
+        if domanda == "si":
+            aggiungi_contatto(rubbrica)
+        else:
+            pass
 
 chi_cerco = input("CHi vuoi cercare? ").title()
-cerca_contatto(rubbrica, chi_cerco)    
+cerca_contatto(rubbrica, chi_cerco)  
+mostra_contatti(rubbrica)  
